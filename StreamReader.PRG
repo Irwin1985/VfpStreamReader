@@ -87,5 +87,18 @@ Define Class StreamReader As Custom
 && ======================================================================== &&
 	Function Peek As Character
 		Return Substr(This.cString, This.nCurrentPos + 1, FETCH_SIGLE_CHAR)
-	Endfunc
+	EndFunc
+&& ======================================================================== &&
+&& Function GetPosition
+&& ======================================================================== &&
+	Function GetPosition As Integer
+		Return This.nCurrentPos
+	EndFunc
+&& ======================================================================== &&
+&& Function SetPosition
+&& ======================================================================== &&
+	Function SetPosition As Void
+		Lparameters tnNewPos As Integer
+		This.nCurrentPos = tnNewPos
+	EndFunc
 Enddefine
